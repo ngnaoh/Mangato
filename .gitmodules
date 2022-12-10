@@ -1,0 +1,9 @@
+[submodule "detect-api"]
+	path = detect-api
+	url = https://github.com/NgnaoH/detect-api.git
+[submodule "mangato-api"]
+	path = mangato-api
+	url = https://github.com/NgnaoH/mangato-api.git
+[submodule "mangato-console"]
+	path = mangato-console
+	url = https://github.com/NgnaoH/mangato-console.git

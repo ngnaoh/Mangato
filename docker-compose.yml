@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  console:
+    container_name: console
+    build: ./mangato-console
+    ports:
+      - 3000:3000
+  api:
+    container_name: api
+    build: ./mangato-api
+    ports:
+      - 3001:3001
+  detect:
+    container_name: detect
+    build: ./detect-api
+    ports:
+      - 5000:5000
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+

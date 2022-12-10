@@ -1,0 +1,10 @@
+{
+  "name": "mangato",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "app:install": "bash ./install.sh",
+    "run:api": "bash ./mangato-api/run.sh",
+    "run:console": "bash ./mangato-console/run.sh"
+  }
+}
