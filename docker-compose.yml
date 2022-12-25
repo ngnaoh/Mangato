@@ -11,11 +11,11 @@ services:
     build: ./mangato-api
     ports:
       - 3001:3001
-  detect:
-    container_name: detect
-    build: ./detect-api
-    ports:
-      - 5000:5000
+  # detect:
+  #   container_name: detect
+  #   build: ./detect-api
+  #   ports:
+  #     - 5000:5000
   nginx:
     container_name: nginx
     build: ./nginx
