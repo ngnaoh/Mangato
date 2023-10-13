@@ -9,18 +9,20 @@ services:
   api:
     container_name: api
     build: ./mangato-api
+    environment:
+      # - MANGATO_DETECT_API=http://192.168.158.4:5000/detect
+      - MANGATO_DETECT_API=${MANGATO_DETECT_API}
     ports:
       - 3001:3001
-  # detect:
-  #   container_name: detect
-  #   build: ./detect-api
-  #   ports:
-  #     - 5000:5000
-  nginx:
-    container_name: nginx
-    build: ./nginx
-    restart: unless-stopped
+  detect:
+    container_name: detect
+    build: ./detect-api
     ports:
-      - 80:80
-      - 443:443
-
+      - 5000:5000
+  # nginx:
+  #   container_name: nginx
+  #   build: ./nginx
+  #   restart: unless-stopped
+  #   ports:
+  #     - 80:80
+  #     - 443:443
